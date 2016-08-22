@@ -1,4 +1,4 @@
-module Core
+module Mesin
   module ApplicationHelper
   end
 end

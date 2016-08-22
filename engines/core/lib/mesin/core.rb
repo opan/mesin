@@ -1,4 +1,6 @@
-# require "core/engine"
+require 'pundit'
+require 'devise'
+require 'haml-rails'
 
 module Mesin
   module Core
