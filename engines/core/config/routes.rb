@@ -1,2 +1,2 @@
-Core::Engine.routes.draw do
+Mesin::Core::Engine.routes.draw do
 end

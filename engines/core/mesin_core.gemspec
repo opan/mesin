@@ -1,11 +1,11 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "core/version"
+require "mesin/core/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "core"
+  s.name        = "mesin_core"
   s.version     = Mesin::Core::VERSION
   s.authors     = ['Damar Kuncoro', 'Opan Mustopah', 'Dyo Medio']
   s.email       = ["opan.neutron@gmail.com"]
