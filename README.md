@@ -11,7 +11,7 @@ ALTER USER "mesin-user" WITH PASSWORD 'mesin-user';
 ALTER USER "mesin-user" WITH SUPERUSER;
 ```
 #### Setup environment variables
-Move into parent app directory and then setup `.env` file like this:
+Move into `mesin-apps` directory and then setup `.env` file like this:
 ```
 export DEV_DB_USER='mesin-user'
 export DEV_DB_PASS='mesin-user'
