@@ -1,6 +1,6 @@
 class DeviseCreateMesinUsers < ActiveRecord::Migration[5.0]
   def change
-    create_table :mesin_users do |t|
+    create_table :mesin_users, id: :uuid do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
@@ -30,7 +30,7 @@ class DeviseCreateMesinUsers < ActiveRecord::Migration[5.0]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-
+      t.boolean :is_suspended, default: false, null: false
       t.timestamps null: false
     end
 

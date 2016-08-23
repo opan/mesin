@@ -8,6 +8,15 @@ module Mesin
         g.fixture_replacement :factory_girl, dir: 'spec/factories'
         g.template_engine :haml
       end
+
+      # Load migration files to parent app
+      initializer :append_migrations do |app|
+        unless app.root.to_s.match(root.to_s)
+          config.paths['db/migrate'].expanded.each do |p|
+            app.config.paths['db/migrate'] << p
+          end
+        end
+      end
     end
   end
 end

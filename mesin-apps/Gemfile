@@ -39,3 +39,7 @@ gem 'mesin_core', path: '../engines/core'
 group :development do
   gem 'listen'
 end
+
+group :development, :test do
+  gem 'dotenv-rails'
+end
