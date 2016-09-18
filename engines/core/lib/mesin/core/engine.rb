@@ -7,6 +7,7 @@ module Mesin
         g.test_framework :rspec
         g.fixture_replacement :factory_girl, dir: 'spec/factories'
         g.template_engine :haml
+        g.javascript_engine :coffee
       end
 
       # Load migration files to parent app
@@ -21,6 +22,10 @@ module Mesin
       # Append vendor directory assets for keep third party plugin
       config.assets.paths << "vendor/javascripts"
       config.assets.paths << "vendor/stylesheets"
+
+      # Do not make helpers available in all views
+      # Helpers should isolated and available only for related controller or views
+      config.action_controller.include_all_helpers = false
     end
   end
 end
