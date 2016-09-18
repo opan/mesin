@@ -1,2 +1,2 @@
-//= link_directory ../javascripts/core .js
-//= link_directory ../stylesheets/core .css
+//= link_directory ../javascripts/mesin .js
+//= link_directory ../stylesheets/mesin .css
