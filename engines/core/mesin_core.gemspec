@@ -23,11 +23,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'puma'
   s.add_dependency 'rake'
   s.add_dependency 'jquery-rails'
-  s.add_dependency 'less-rails'
+  s.add_dependency 'bootstrap-sass'
+  s.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.6'
   s.add_dependency 'uglifier', '>= 1.3.0'
   s.add_dependency 'coffee-rails', '~> 4.2'
-  s.add_dependency 'therubyrhino'
-  s.add_dependency 'twitter-bootstrap-rails'
 
   s.add_development_dependency "pg"
   s.add_development_dependency 'rspec'

@@ -17,6 +17,10 @@ module Mesin
           end
         end
       end
+
+      # Append vendor directory assets for keep third party plugin
+      config.assets.paths << "vendor/javascripts"
+      config.assets.paths << "vendor/stylesheets"
     end
   end
 end
