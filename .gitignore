@@ -1,5 +1,5 @@
 .bundle/
-./log/*.log
+mesin-apps/log/*.log
 mesin-apps/tmp/
 pkg/
 test/dummy/db/*.sqlite3
