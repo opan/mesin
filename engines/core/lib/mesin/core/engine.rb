@@ -19,6 +19,11 @@ module Mesin
         end
       end
 
+      # Add assets precompile file extension
+      initializer :add_assets_precompile do |app|
+        app.config.assets.precompile += %w( *.png  *.jpg *.gif *.scss *.sass )
+      end
+
       # Append vendor directory assets for keep third party plugin
       config.assets.paths << "vendor/javascripts"
       config.assets.paths << "vendor/stylesheets"

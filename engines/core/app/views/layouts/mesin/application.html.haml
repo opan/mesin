@@ -7,7 +7,50 @@
     %title Mesin | A modular Rails 5 application
     = stylesheet_link_tag    "mesin/application", media: "all"
     = csrf_meta_tags
-  %body
-    .container
-      = yield
+  %body.hold-transition.skin-blue.sidebar-mini{ data: { contasset: "c-#{controller_name} ac-#{action_name}" } }
+    .wrapper
+      -# Main Header
+      %header.main-header
+        -# Logo
+        = link_to '#', class: 'logo' do
+          -# Mini logo
+          %span.logo-mini
+            %b A
+            LT
+
+          -# Large logo
+          %span.logo-lg
+            %b Admin
+            LTE
+        -# Header Navbar: style can be found in header.less
+        %nav.navbar.navbar-static-top
+          -# Sidebar toggle button
+          = link_to "#", class: "sidebar-toggle", data: { toggle: 'offcanvas' }, role: 'button' do
+            %span.sr-only Toggle navigations
+
+          -# Navbar right menu
+          .navbar-custom-menu
+            %ul.nav.navbar-nav
+
+              -# Messages: style can be found in dropdown.less
+              %li.dropdown.messages-menu
+                = link_to "#", class: "dropdown-toggle", data: { toggle: 'dropdown' } do
+                  = icon "fa-envelope-o"
+                  %span.label.label-success 4
+                %ul.dropdow-menu
+                  %li.header You have 4 messages
+                  %li
+                    -# Inner menu: Contains the actual data
+                    %ul.menu
+                      %li
+                        -# Start message here
+                        = link_to "#" do
+                          .pull-left
+                            = image_tag 'mesin/avatar5.png', class: 'img-circle', alt: 'User image'
+                          %h4
+                            %p This is message content
+                        -# End message
+
+
+      -# = yield
     = javascript_include_tag "mesin/application"
