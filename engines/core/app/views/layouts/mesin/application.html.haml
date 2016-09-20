@@ -37,7 +37,7 @@
                 = link_to "#", class: "dropdown-toggle", data: { toggle: 'dropdown' } do
                   = icon "fa-envelope-o"
                   %span.label.label-success 4
-                %ul.dropdow-menu
+                %ul.dropdown-menu
                   %li.header You have 4 messages
                   %li
                     -# Inner menu: Contains the actual data
@@ -50,7 +50,48 @@
                           %h4
                             %p This is message content
                         -# End message
+              %li.dropdown.user.user-menu
+                = link_to "#", class: "dropdown-toggle", data: { toggle: 'dropdown' } do
+                  = image_tag "mesin/avatar5.png", class: 'user-image', alt: 'User image'
+                  %span.hidden-xs Opan Mustopah
 
+                %ul.dropdown-menu
+                  -# User image
+                  %li.user-header
+                    = image_tag "mesin/avatar5.png", class: 'img-circle', alt: 'User image'
+                    %p
+                      Opan mustopah
+                      %small Member since 2016
+                  -# Menu body
+                  %li.user-body
+                    .row
+                      - 3.times do
+                        .col-xs-4.text-center
+                          = link_to "Followers", "#"
+                  %li.user-footer
+                    .pull-left
+                      = link_to "Profile", "#", class: "btn btn-default btn-flat"
+                    .pull-right
+                      = link_to "Sign out", "#", class: "btn btn-default btn-flat"
+      -# End Main Header
 
+      -# Left side column: Main menu
+      %aside.main-sidebar
+        -# Sidebar: style can be found in sidebar.less
+        %section.sidebar
+          -# Sidebar user panel
+          .user-panel
+            .pull-left.image
+              = image_tag "mesin/avatar5.png", class: 'img-circle', alt: "User image"
+            .pull-left.info
+              %p Opan Mustopah
+              = link_to "#" do
+                = icon 'fa-circle', class: 'text-success', text: 'Online'
+          -# Sidebar menu: Style can be found in sidebar.less
+          %ul.sidebar-menu
+            %li.header MAIN NAVIGATION
+            %li.active
+              = link_to "#" do
+                = icon 'fa-dashboard', text: "Dashboard"
       -# = yield
     = javascript_include_tag "mesin/application"
